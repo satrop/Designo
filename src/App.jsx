@@ -1,6 +1,7 @@
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
 import Nav from './Components/Nav';
+import Footer from './Components/Footer';
 
 import Home from './Pages/Home';
 import WebDesign from './Pages/WebDesign';
@@ -26,7 +27,7 @@ function App() {
 				<Route path="/locations" element={<Locations />} />
 				<Route path="/contact" element={<Contact />} />
 			</Routes>
-			{/* <Footer /> */}
+			<Footer />
 		</HashRouter>
 	);
 }

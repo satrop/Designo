@@ -37,7 +37,7 @@ const Nav = () => {
 	});
 
 	return (
-		<nav>
+		<>
 			<div className={`[ mobile-controls ] [ flex d-none--md ]`}>
 				<Link to="/" aria-label="Company logo" className="d-none--md">
 					<img src={logo} alt="Logo" />
@@ -56,14 +56,14 @@ const Nav = () => {
 			</div>
 			<AnimatePresence initial={false} onExitComplete={() => null}>
 				{isOpen && (
-					<motion.ul
-						className={`[ main-ul--mobile ] [ d-none--md ]`}
+					<motion.nav
+						className={`[ main-nav--mobile ] [ d-none--md ]`}
 						data-state={isOpen ? 'open' : 'closed'}
 						variants={dropIn}
 						initial="hidden"
 						animate="visible"
 						exit="exit">
-						<div className="wrapper">
+						<ul className="wrapper">
 							<li>
 								<NavLink to="/about" onClick={menuToggle}>
 									Our Company
@@ -79,13 +79,13 @@ const Nav = () => {
 									Contact
 								</NavLink>
 							</li>
-						</div>
-					</motion.ul>
+						</ul>
+					</motion.nav>
 				)}
 			</AnimatePresence>
 			{isOpen && <div className="fade" onClick={menuToggle}></div>}
-			<ul className={`[ main-ul--desktop ] [ d-none d-block--md ]`}>
-				<div
+			<nav className={`[ main-nav--desktop ] [ d-none d-block--md ]`}>
+				<ul
 					className="wrapper flex"
 					data-scrolled={`${scroll ? 'scrolled' : ''}`}>
 					<li>
@@ -108,9 +108,9 @@ const Nav = () => {
 							Contact
 						</NavLink>
 					</li>
-				</div>
-			</ul>
-		</nav>
+				</ul>
+			</nav>
+		</>
 	);
 };
 

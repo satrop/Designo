@@ -1,0 +1,19 @@
+.peach {
+	&--fc {
+		color: var(--clr-p-1);
+	}
+
+	&--bc {
+		background-color: var(--clr-p-1);
+	}
+}
+
+.white {
+	&--fc {
+		color: var(--clr-p-3);
+	}
+
+	&--bc {
+		background-color: var(--clr-p-3);
+	}
+}

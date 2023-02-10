@@ -1,16 +1,17 @@
-@use '../../SCSS/globals/breaks' as b;
+@use '../globals/breaks' as b;
 
-.main-ul--desktop {
+.main-nav--desktop {
 	@include b.breakpoint(md) {
 		background-color: var(--clr-p-3);
 		top: 0;
 		position: fixed;
 		top: 0;
 		width: 100%;
-		margin-inline: block;
-		align-items: center;
 
-		div {
+		ul {
+			margin-inline: auto;
+			align-items: center;
+
 			gap: 2.625rem;
 
 			li {
