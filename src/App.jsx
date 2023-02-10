@@ -1,6 +1,6 @@
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
-import Nav from './Components/Nav/Nav';
+import Nav from './Components/Nav';
 
 import Home from './Pages/Home';
 import WebDesign from './Pages/WebDesign';
@@ -9,6 +9,8 @@ import GraphicDesign from './Pages/GraphicDesign';
 import About from './Pages/About';
 import Locations from './Pages/Locations';
 import Contact from './Pages/Contact';
+
+import './SCSS/styles.scss';
 
 function App() {
 	return (

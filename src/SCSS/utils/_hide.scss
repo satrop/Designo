@@ -1,0 +1,35 @@
+@use '../../SCSS/globals/breaks' as b;
+
+.d-none {
+	display: none;
+
+	@include b.breakpoint(md) {
+		&.d-block--md {
+			display: block;
+		}
+	}
+
+	@include b.breakpoint(lg) {
+		&.d-block--lg {
+			display: block;
+		}
+	}
+}
+
+@include b.breakpoint(md) {
+	.d-none--md {
+		display: none;
+	}
+}
+
+@include b.breakpoint(lg) {
+	.d-none--lg {
+		display: none;
+	}
+}
+
+
+// <div className="d-none d-block--md">Show md up</div>
+// <div className="d-none d-block--lg">Show lg up</div>
+// <div className="d-none--md">Hide from md up</div>
+// <div className="d-none--lg">Hide from lg up</div>

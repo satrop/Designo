@@ -1,0 +1,17 @@
+:root {
+	--ff: 'Jost', sans-serif;
+	--clamp: clamp(20.438rem, 89.715vw, 69.438rem);
+
+	--clr-p-1: hsla(10, 72%, 66%, 1); // Peace | #E7816B
+	--clr-p-2: hsla(264, 4%, 11%, 1); // Black | #1D1C1E
+	--clr-p-3: hsla(0, 0%, 100%, 1); // White | #FFFFFF
+
+	--clr-s-1: hsla(10, 100%, 80%, 1); // Light Peach | #FFAD9B
+	--clr-s-2: hsla(264, 5%, 20%, 1); // Dark Grey | #333136
+	--clr-s-3: hsla(210, 17%, 95%, 0.86); // Light Grey | #F1F3F5
+
+	--br-sm: 0.5rem;
+	--br-lg: 0.938rem;
+
+	--trans-dur: 0.3s ease-in-out;
+}

@@ -1,0 +1,9 @@
+.radius {
+	&--sm {
+		border-radius: var(--br-sm);
+	}
+
+	&--lg {
+		background-repeat: var(--br-lg);
+	}
+}

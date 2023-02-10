@@ -1,0 +1,25 @@
+@use '../../SCSS/globals/breaks' as b;
+
+.main-ul--desktop {
+	display: none;
+
+	@include b.breakpoint(md) {
+		background-color: var(--clr-p-3);
+		top: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		margin-inline: block;
+		display: block;
+
+		.wrapper {
+			align-items: center;
+			height: 10.125rem;
+			transition: height (var(--trans-dur));
+
+			&[data-scrolled='scrolled'] {
+				height: 5rem;
+			}
+		}
+	}
+}

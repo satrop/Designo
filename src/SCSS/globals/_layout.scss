@@ -1,0 +1,14 @@
+@use './breaks' as b;
+
+body {
+	overflow-x: hidden;
+	line-height: 1.625rem;
+	font-size: 1rem;
+	-webkit-font-smoothing: antialiased;
+	color: var(--clr-s-2);
+	padding-top: 7.25rem;
+
+	@include b.breakpoint(md) {
+		padding-top: 10.125rem;
+	}
+}
