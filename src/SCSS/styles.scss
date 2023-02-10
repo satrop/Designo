@@ -13,3 +13,5 @@
 
 // Blocks
 @use './blocks/fade';
+@use './blocks/_nav--mobile.scss';
+@use './blocks/_nav--desktop.scss';

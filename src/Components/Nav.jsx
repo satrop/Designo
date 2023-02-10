@@ -4,9 +4,6 @@ import { useState, useEffect } from 'react';
 
 import logo from '/logo.svg';
 
-import '../SCSS/blocks/_nav--mobile.scss';
-import '../SCSS/blocks/_nav--desktop.scss';
-
 const Nav = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
@@ -60,32 +57,34 @@ const Nav = () => {
 			<AnimatePresence initial={false} onExitComplete={() => null}>
 				{isOpen && (
 					<motion.ul
-						class={`[ main-ul--mobile ] [ d-none--md ]`}
+						className={`[ main-ul--mobile ] [ d-none--md ]`}
 						data-state={isOpen ? 'open' : 'closed'}
 						variants={dropIn}
 						initial="hidden"
 						animate="visible"
 						exit="exit">
-						<li>
-							<NavLink to="/about" onClick={menuToggle}>
-								Our Company
-							</NavLink>
-						</li>
-						<li>
-							<NavLink to="/locations" onClick={menuToggle}>
-								Locations
-							</NavLink>
-						</li>
-						<li>
-							<NavLink to="/contact" onClick={menuToggle}>
-								Contact
-							</NavLink>
-						</li>
+						<div className="wrapper">
+							<li>
+								<NavLink to="/about" onClick={menuToggle}>
+									Our Company
+								</NavLink>
+							</li>
+							<li>
+								<NavLink to="/locations" onClick={menuToggle}>
+									Locations
+								</NavLink>
+							</li>
+							<li>
+								<NavLink to="/contact" onClick={menuToggle}>
+									Contact
+								</NavLink>
+							</li>
+						</div>
 					</motion.ul>
 				)}
 			</AnimatePresence>
 			{isOpen && <div className="fade" onClick={menuToggle}></div>}
-			<ul className="main-ul--desktop">
+			<ul className={`[ main-ul--desktop ] [ d-none d-block--md ]`}>
 				<div
 					className="wrapper flex"
 					data-scrolled={`${scroll ? 'scrolled' : ''}`}>
