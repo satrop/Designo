@@ -6,6 +6,26 @@
 	&--bc {
 		background-color: var(--clr-p-1);
 	}
+
+	&--light {
+		&--fc {
+			color: var(--clr-s-1);
+		}
+
+		&--bc {
+			background-color: var(--clr-s-1);
+		}
+	}
+
+	&--very-light {
+		&--fc {
+			color: var(--clr-s-4);
+		}
+
+		&--bc {
+			background-color: var(--clr-s-4);
+		}
+	}
 }
 
 .white {

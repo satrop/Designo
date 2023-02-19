@@ -1,4 +1,11 @@
+@use '../globals/breaks' as b;
+
 .full-bleed {
 	width: 100vw;
 	margin-left: calc(50% - 50vw);
+	
+	@include b.breakpoint(md){
+		width: auto;
+		margin-left: unset;
+	}
 }

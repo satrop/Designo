@@ -1,0 +1,44 @@
+@use '../globals/breaks' as b;
+
+// Background image options
+.card {
+	&[data-background='pattern--cta'] {
+		background-image: url('/shared/desktop/bg-pattern-call-to-action.svg');
+		background-position: 45% center;
+		background-repeat: no-repeat;
+
+		@include b.breakpoint(md) {
+			background-position: 10% center;
+		}
+
+		@include b.breakpoint(lg) {
+			background-position: 100% center;
+		}
+	}
+
+	&[data-background='pattern--three'] {
+		background-image: url('/shared/desktop/bg-pattern-three-circles.svg');
+		background-position: left 120%;
+		background-repeat: no-repeat;
+
+		&[data-order="row-reverse"] {
+			background-position: left 120%;
+			
+			@include b.breakpoint(md) {
+				background-position: 80% 90%;
+			}
+	
+			@include b.breakpoint(lg) {
+				background-position: 80% bottom;
+			}
+		}
+
+		@include b.breakpoint(md) {
+			background-position: 80% 90%;
+		}
+
+		@include b.breakpoint(lg) {
+			background-position: 80% bottom;
+		}
+	}
+}

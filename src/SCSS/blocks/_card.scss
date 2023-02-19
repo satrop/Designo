@@ -1,37 +1,15 @@
-@use '../globals/breaks' as b;
+a.card {
+	display: block;
+}
 
-.card__content {
-	--flow-space: 0.5rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	min-height: 15.625rem;
+.card {
 	overflow: hidden;
 
-	@include b.breakpoint(md) {
-		min-height: 12.5rem;
-
-		&[data-layout='grid'] {
-			display: grid;
-            grid-template-columns: 30% 30%;
-			grid-template-areas:
-				'title right-col'
-				'text right-col';
-
-			.card__title {
-                grid-area: title;
-                margin-top: auto;
-            }
-			.card__text {
-				grid-area: text;
-                margin-bottom: auto;
-			}
-
-			.button {
-				grid-area: right-col;
-                place-self: center;
-			}
-		}
+	.card__content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
 	}
 }

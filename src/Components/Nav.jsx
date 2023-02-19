@@ -94,19 +94,13 @@ const Nav = () => {
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/about" onClick={menuToggle}>
-							Our Company
-						</NavLink>
+						<NavLink to="/about">Our Company</NavLink>
 					</li>
 					<li>
-						<NavLink to="/locations" onClick={menuToggle}>
-							Locations
-						</NavLink>
+						<NavLink to="/locations">Locations</NavLink>
 					</li>
 					<li>
-						<NavLink to="/contact" onClick={menuToggle}>
-							Contact
-						</NavLink>
+						<NavLink to="/contact">Contact</NavLink>
 					</li>
 				</ul>
 			</nav>

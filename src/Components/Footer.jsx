@@ -1,25 +1,65 @@
+import FooterCard from '../Components/FooterCard';
+
+import footerLogo from '/shared/desktop/logo-dark.png';
+
+import socialData from '/src/assets/social-links.json';
+
 const Footer = () => {
+	const socialLinks = socialData.socials.map((item, idx) => {
+		return (
+			<li key={idx}>
+				<a href={item.link} aria-label={item.title}>
+					<img src={item.icon} alt="" />
+				</a>
+			</li>
+		);
+	});
+
+	//console.log(socialData.socials.title);
+
 	return (
 		<footer>
-			<div className="wrapper flow">
-				<div className={`[ card ] [ peach--bc radius--lg ]`}>
-                    <div className={`[ card__content ] [ flow ]`} data-layout='grid'>
-						<div className={`[ card__title ] [ white--fc ]`}>
-							<h4>Card title</h4>
-						</div>
-						<div className={`[ card__text ] [ white--fc ]`}>
-							<p>
-								Lorem ipsum dolor sit amet consectetur
-								adipisicing elit. Voluptatibus est velit
-								dignissimos.
-							</p>
-						</div>
-						<a
-							href="#nogo"
-							className={`[ button ] [ white--bc radius--sm ]`}>
-							Button
+			<div className="[ wrapper ] [ flow ]">
+				<FooterCard />
+				<div className="[ section ] [ flow ]">
+					<div className="footer-logo-wrapper">
+						<a href="#nogo" aria-label="To home page">
+							<img src={footerLogo} alt="Company logo" />
 						</a>
 					</div>
+					<nav className="quick-links">
+						<ul
+							className="[ ul flex uppercase white--fc flow ]"
+							data-flex-col="column">
+							<li>
+								<a href="#nogo">Our Company</a>
+							</li>
+							<li>
+								<a href="#nogo">Locations</a>
+							</li>
+							<li>
+								<a href="#nogo">Contact</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+				<div className="[ section address ] [ flow ]">
+					<address>
+						<strong>Designo Central Office</strong> <br></br>
+						3886 Wellington Street<br></br>
+						Toronto, Ontario M9C 3J5
+					</address>
+					<address>
+						<strong>Contact Us (Central Office)</strong>
+						<br></br>P : +1 253-863-8967
+						<br></br>M :{' '}
+						<a href="mailto:contact@designo.co">
+							contact@designo.co
+						</a>
+					</address>
+					<nav className="social-links">
+						<ul className="[ ul flex ]">{socialLinks}</ul>
+					</nav>
 				</div>
 			</div>
 		</footer>

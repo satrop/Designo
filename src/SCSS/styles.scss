@@ -10,10 +10,18 @@
 @use './utils/visually-hidden';
 @use './utils/flex';
 @use './utils/hide';
+@use './utils/card-images';
+@use './utils/uppercase';
+@use './utils/ul';
 
 // Blocks
 @use './blocks/fade';
 @use './blocks/_nav--mobile';
 @use './blocks/_nav--desktop';
 @use './blocks/card';
+@use './blocks/FooterCard';
+@use './blocks/ItemCard';
+@use './blocks/ContentCardBlock';
 @use './blocks/button';
+@use './blocks/footer';
+@use './blocks/CATCard';

@@ -1,0 +1,61 @@
+@use '../globals/breaks' as b;
+
+.card--footer {
+	.card__content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		min-height: 15.625rem;
+		padding: 4rem 1.5rem;
+		text-align: center;
+
+		.card__title {
+			margin-bottom: 1rem;
+		}
+
+		.button {
+			margin-top: 2rem;
+		}
+
+		@include b.breakpoint(md) {
+			max-width: 52ch;
+			margin-inline: auto;
+		}
+
+		@include b.breakpoint(lg) {
+			min-height: 12.5rem;
+			max-width: unset;
+			margin-inline: unset;
+            padding-inline: 6rem;
+
+			.button {
+                margin-left: auto;
+				margin-top: unset;
+			}
+
+			&[data-layout='grid'] {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				grid-template-areas:
+					'title right-col'
+					'text right-col';
+
+				.card__title {
+					grid-area: title;
+					margin-top: auto;
+                    max-width: 30ch;
+				}
+				.card__text {
+					grid-area: text;
+					margin-bottom: auto;
+				}
+
+				.button {
+					grid-area: right-col;
+					place-self: center;
+				}
+			}
+		}
+	}
+}

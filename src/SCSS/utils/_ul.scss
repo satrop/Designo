@@ -1,0 +1,11 @@
+@use '../globals/breaks' as b;
+
+.ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+
+	&[data-flex-col='column'] {
+		flex-direction: column;
+	}
+}

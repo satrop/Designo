@@ -1,0 +1,57 @@
+@use '../globals/breaks' as b;
+
+a.card--item {
+	transition: all var(--trans-dur);
+
+	.card__title {
+		transition: all var(--trans-dur);
+	}
+
+	&:hover {
+		background-color: var(--clr-p-1);
+		color: #fff;
+
+		.card__title {
+			color: inherit;
+		}
+	}
+
+	.card__content {
+		padding: 2rem 1.875rem;
+		max-width: 40ch;
+		margin-inline: auto;
+		text-align: center;
+	}
+
+	@include b.breakpoint(md) {
+		display: grid;
+		grid-template-columns: 49.057% 1fr;
+
+		.card__content {
+			max-width: 35ch;
+		}
+	}
+
+	@include b.breakpoint(lg) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.card-items-wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 2.5rem;
+
+	@include b.breakpoint(md) {
+		gap: 2rem;
+	}
+
+	@include b.breakpoint(lg) {
+		row-gap: 2rem;
+		column-gap: 1.875rem;
+	}
+
+	@include b.breakpoint(lg) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
