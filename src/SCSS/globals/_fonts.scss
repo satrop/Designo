@@ -37,6 +37,13 @@ a {
 :focus {
 	outline: 2px dotted;
 	outline-offset: 0.25rem;
+	border-radius: var(--br-sm);
+}
+
+.black--bc {
+	*:focus {
+		outline-color: #fff;
+	}
 }
 
 .fs {

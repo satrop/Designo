@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
+
 const CTACard = (props) => {
 	return (
-		<a
-			href="#nogo"
+		<Link
+			to={props.link}
 			className="[ card card--cta ] [ radius--lg ]"
 			aria-label={`${props.ariaLabel}`}>
 			<picture>
@@ -38,7 +40,7 @@ const CTACard = (props) => {
 					</svg>
 				</div>
 			</div>
-		</a>
+		</Link>
 	);
 };
 

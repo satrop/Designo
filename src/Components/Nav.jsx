@@ -40,7 +40,7 @@ const Nav = () => {
 	return (
 		<>
 			<SkipTo />
-			<div className={`[ mobile-controls ] [ flex d-none--md ]`}>
+			<div className="[ mobile-controls ] [ flex d-none--md ]">
 				<Link to="/" aria-label="Company logo" className="d-none--md">
 					<img src={logo} alt="Logo" />
 				</Link>
@@ -59,7 +59,7 @@ const Nav = () => {
 			<AnimatePresence initial={false} onExitComplete={() => null}>
 				{isOpen && (
 					<motion.nav
-						className={`[ main-nav--mobile ] [ d-none--md ]`}
+						className="[ main-nav--mobile ] [ d-none--md ]"
 						data-state={isOpen ? 'open' : 'closed'}
 						variants={dropIn}
 						initial="hidden"
@@ -86,12 +86,15 @@ const Nav = () => {
 				)}
 			</AnimatePresence>
 			{isOpen && <div className="fade" onClick={menuToggle}></div>}
-			<nav className={`[ main-nav--desktop ] [ d-none d-block--md ]`}>
+			<nav className="[ main-nav--desktop ] [ d-none d-block--md ]">
 				<ul
 					className="wrapper flex"
-					data-scrolled={`${scroll ? 'scrolled' : ''}`}>
+					data-scrolled="${scroll ? 'scrolled' : ''}">
 					<li>
-						<NavLink to="/" aria-label="Company logo">
+						<NavLink
+							to="/"
+							aria-label="Company logo"
+							className="main-logo">
 							<img src={logo} alt="Logo" />
 						</NavLink>
 					</li>

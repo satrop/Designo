@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import FooterCard from '../Components/FooterCard';
 
 import footerLogo from '/shared/desktop/logo-dark.png';
@@ -15,27 +17,27 @@ const Footer = () => {
 	});
 
 	return (
-		<footer>
+		<footer className="black--bc">
 			<div className="[ wrapper ] [ flow ]">
 				<FooterCard />
 				<div className="[ section ] [ flow ]">
 					<div className="footer-logo-wrapper">
-						<a href="#nogo" aria-label="To home page">
+						<Link to="/" aria-label="To home page">
 							<img src={footerLogo} alt="Company logo" />
-						</a>
+						</Link>
 					</div>
 					<nav className="quick-links">
 						<ul
 							className="[ ul flex uppercase white--fc flow ]"
 							data-flex-col="column">
 							<li>
-								<a href="#nogo">Our Company</a>
+								<Link to="/about">Our Company</Link>
 							</li>
 							<li>
-								<a href="#nogo">Locations</a>
+								<Link to="/locations">Locations</Link>
 							</li>
 							<li>
-								<a href="#nogo">Contact</a>
+								<Link to="/contact">Contact</Link>
 							</li>
 						</ul>
 					</nav>

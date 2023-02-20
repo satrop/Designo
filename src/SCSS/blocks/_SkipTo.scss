@@ -4,7 +4,7 @@
 	transform: translateX(-50%);
 	transition: top var(--trans-dur);
 	top: -100%;
-	z-index: 9999;
+	z-index: 9999999;
 
 	&:focus {
 		top: 50px;

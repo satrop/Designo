@@ -84,6 +84,7 @@ const Home = () => {
 				<section className="cta-card-wrapper">
 					<div className="col">
 						<CTACard
+							link={'web-design'}
 							largeImage={true}
 							cardImage={'image-web-design'}
 							cardTitle={'Web Design'}
@@ -92,11 +93,13 @@ const Home = () => {
 					</div>
 					<div className="col">
 						<CTACard
+							link={'app-design'}
 							cardImage={'image-app-design'}
 							cardTitle={'App Design'}
 							ariaLabel={'Hav a look at all of our Apps'}
 						/>
 						<CTACard
+							link={'graphic-design'}
 							cardImage={'image-graphic-design'}
 							cardTitle={'Graphic Design'}
 							ariaLabel={'View our graphic design projects'}

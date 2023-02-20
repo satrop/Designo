@@ -37,10 +37,14 @@
 						transform-origin: center;
 					}
 
-					&:hover {
+					&:hover:not(.main-logo) {
 						&::after {
 							transform: scale(1);
 						}
+					}
+
+					&.main-logo {
+						display: block;
 					}
 				}
 			}
