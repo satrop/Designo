@@ -6,16 +6,16 @@ const CTACard = (props) => {
 			aria-label={`${props.ariaLabel}`}>
 			<picture>
 				<source
-					srcSet={`/home/desktop/${props.cardImage}${
+					srcSet={`./home/desktop/${props.cardImage}${
 						props.largeImage == true ? '-large' : ''
 					}.jpg`}
 					media="(min-width: 60rem)"
 				/>
 				<source
-					srcSet={`/home/tablet/${props.cardImage}.jpg`}
+					srcSet={`./home/tablet/${props.cardImage}.jpg`}
 					media="(min-width: 48rem)"
 				/>
-				<img src={`/home/mobile/${props.cardImage}.jpg`} alt="" />
+				<img src={`./home/mobile/${props.cardImage}.jpg`} alt="" />
 			</picture>
 			<div className="[ card__content ] [ white--fc uppercase flow ]">
 				<div className="[ card__title ]">
