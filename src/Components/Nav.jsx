@@ -89,7 +89,7 @@ const Nav = () => {
 			<nav className="[ main-nav--desktop ] [ d-none d-block--md ]">
 				<ul
 					className="wrapper flex"
-					data-scrolled="${scroll ? 'scrolled' : ''}">
+					data-scrolled={scroll ? 'scrolled' : ''}>
 					<li>
 						<NavLink
 							to="/"

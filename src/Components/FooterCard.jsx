@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const FooterCard = () => {
 	return (
 		<div
@@ -13,9 +15,11 @@ const FooterCard = () => {
 						find out how our expertise can help your business grow.
 					</p>
 				</div>
-				<a href="#nogo" className="[ button ] [ white--bc radius--sm ]">
+				<Link
+					to="/contact"
+					className="[ button ] [ white--bc radius--sm ]">
 					Get in touch
-				</a>
+				</Link>
 			</div>
 		</div>
 	);

@@ -1,5 +1,6 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import CTACard from '../Components/CTACard';
 
@@ -40,11 +41,11 @@ const Home = () => {
 							app design, and engaging brand experiences. Find out
 							more about our services.
 						</p>
-						<a
-							href="#nogo"
+						<Link
+							to="/app-design"
 							className="[ button ] [ white--bc radius--sm black--fc ]">
 							Learn More
-						</a>
+						</Link>
 					</div>
 					<img src={heroImage} alt="Hero image of phone" />
 					<svg
