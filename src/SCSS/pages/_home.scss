@@ -1,0 +1,19 @@
+@use '../globals/breaks' as b;
+
+.home {
+	.cta-card-wrapper {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+
+        .col {
+            gap: 1.5rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+		@include b.breakpoint(lg) {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+}

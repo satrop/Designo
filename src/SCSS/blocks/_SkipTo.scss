@@ -1,0 +1,12 @@
+.skip-to {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: top var(--trans-dur);
+	top: -100%;
+	z-index: 9999;
+
+	&:focus {
+		top: 50px;
+	}
+}

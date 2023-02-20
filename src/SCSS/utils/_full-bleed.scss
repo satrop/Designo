@@ -3,9 +3,23 @@
 .full-bleed {
 	width: 100vw;
 	margin-left: calc(50% - 50vw);
-	
-	@include b.breakpoint(md){
+
+	&.radius {
+		&--lg,
+		&--sm {
+			border-radius: 0;
+		}
+	}
+
+	@include b.breakpoint(md) {
 		width: auto;
 		margin-left: unset;
+
+		&.radius--lg {
+			border-radius: var(--br-lg);
+		}
+		&.radius--sm {
+			border-radius: var(--br-sm);
+		}
 	}
 }

@@ -1,21 +1,18 @@
 import FooterCard from '../Components/FooterCard';
 
 import footerLogo from '/shared/desktop/logo-dark.png';
-
-import socialData from '/src/assets/social-links.json';
+import socialData from './DataSocialLinks';
 
 const Footer = () => {
-	const socialLinks = socialData.socials.map((item, idx) => {
+	const socialLinks = socialData.map((item, idx) => {
 		return (
 			<li key={idx}>
 				<a href={item.link} aria-label={item.title}>
-					<img src={item.icon} alt="" />
+					{item.icon}
 				</a>
 			</li>
 		);
 	});
-
-	//console.log(socialData.socials.title);
 
 	return (
 		<footer>

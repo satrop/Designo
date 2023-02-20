@@ -1,8 +1,160 @@
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { useEffect } from 'react';
+
+import CTACard from '../Components/CTACard';
+
+import heroImage from '/home/desktop/image-hero-phone.png';
+import illustrationFriendly from '/home/desktop/illustration-friendly.svg';
+import illustrationPassionate from '/home/desktop/illustration-passionate.svg';
+import illustrationResourceful from '/home/desktop/illustration-resourceful.svg';
+
 const Home = () => {
+	// Class name to body tag for SCSS hooks
+	useEffect(() => {
+		document.body.classList.add('home');
+		return () => {
+			document.body.classList.remove('home');
+		};
+	}, []);
+
 	return (
-		<main className="wrapper flow">
-			<h1>Home</h1>
-		</main>
+		<HelmetProvider>
+			<Helmet>
+				<title>Designo | Home Page</title>
+				<meta name="author" content="Steve Portas" />
+				<meta
+					name="description"
+					content="Home page for Designo where good design meets you!"
+				/>
+			</Helmet>
+			<main id="main-content" className="wrapper flow">
+				<div className="[ card card--hero ] [ radius--lg peach--bc white--fc full-bleed ]">
+					<div className="[ text ] [ center--text ]">
+						<h1>
+							Award-winning custom designs and digital branding
+							solutions
+						</h1>
+						<p>
+							With over 10 years in the industry, we are
+							experienced in creating fully responsive websites,
+							app design, and engaging brand experiences. Find out
+							more about our services.
+						</p>
+						<a
+							href="#nogo"
+							className="[ button ] [ white--bc radius--sm black--fc ]">
+							Learn More
+						</a>
+					</div>
+					<img src={heroImage} alt="Hero image of phone" />
+					<svg
+						width="640"
+						height="639"
+						xmlns="http://www.w3.org/2000/svg">
+						<defs>
+							<linearGradient
+								x1="0%"
+								y1="50%"
+								x2="100%"
+								y2="50%"
+								id="a">
+								<stop
+									stopColor="#5D0202"
+									stopOpacity="0"
+									offset="0%"
+								/>
+								<stop
+									stopColor="#5D0202"
+									stopOpacity=".498"
+									offset="100%"
+								/>
+							</linearGradient>
+						</defs>
+						<circle
+							fill="url(#a)"
+							transform="matrix(0 -1 -1 0 640 640)"
+							cx="320"
+							cy="320"
+							r="320"
+							fillRule="evenodd"
+							opacity=".309"
+						/>
+					</svg>
+				</div>
+				<section className="cta-card-wrapper">
+					<div className="col">
+						<CTACard
+							largeImage={true}
+							cardImage={'image-web-design'}
+							cardTitle={'Web Design'}
+							ariaLabel={'View our web design projects'}
+						/>
+					</div>
+					<div className="col">
+						<CTACard
+							cardImage={'image-app-design'}
+							cardTitle={'App Design'}
+							ariaLabel={'Hav a look at all of our Apps'}
+						/>
+						<CTACard
+							cardImage={'image-graphic-design'}
+							cardTitle={'Graphic Design'}
+							ariaLabel={'View our graphic design projects'}
+						/>
+					</div>
+				</section>
+				<section className="[ card-info--wrapper ] [ flow ]">
+					<div className="[ card--info ] [ flow ]">
+						<div className="card--info__image">
+							<div className="circle" data-rotate="45deg"></div>
+							<img src={illustrationPassionate} alt="" />
+						</div>
+						<div className="[ card--info__text ] [ flow ]">
+							<h3>Passionate</h3>
+							<p>
+								Each project starts with an in-depth brand
+								research to ensure we only create products that
+								serve a purpose. We merge art, design, and
+								technology into exciting new solutions.
+							</p>
+						</div>
+					</div>
+
+					<div className="[ card--info ] [ flow ]">
+						<div className="card--info__image">
+							<div className="circle" data-rotate="45deg"></div>
+							<img src={illustrationResourceful} alt="" />
+						</div>
+						<div className="[ card--info__text ] [ flow ]">
+							<h3>RESOURCEFUL</h3>
+							<p>
+								Everything that we do has a strategic purpose.
+								We use an agile approach in all of our projects
+								and value customer collaboration. It guarantees
+								superior results that fulfill our clients'
+								needs.
+							</p>
+						</div>
+					</div>
+
+					<div className="[ card--info ] [ flow ]">
+						<div className="card--info__image">
+							<div className="circle" data-rotate="45deg"></div>
+							<img src={illustrationFriendly} alt="" />
+						</div>
+						<div className="[ card--info__text ] [ flow ]">
+							<h3>FRIENDLY</h3>
+							<p>
+								We are a group of enthusiastic folks who know
+								how to put people first. Our success depends on
+								our customers, and we strive to give them the
+								best experience a company can provide.
+							</p>
+						</div>
+					</div>
+				</section>
+			</main>
+		</HelmetProvider>
 	);
 };
 

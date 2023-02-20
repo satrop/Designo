@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
+import SkipTo from '../Components/SkipTo';
 
 import logo from '/logo.svg';
 
@@ -38,6 +39,7 @@ const Nav = () => {
 
 	return (
 		<>
+			<SkipTo />
 			<div className={`[ mobile-controls ] [ flex d-none--md ]`}>
 				<Link to="/" aria-label="Company logo" className="d-none--md">
 					<img src={logo} alt="Logo" />

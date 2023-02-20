@@ -13,6 +13,7 @@
 @use './utils/card-images';
 @use './utils/uppercase';
 @use './utils/ul';
+@use './utils/center';
 
 // Blocks
 @use './blocks/fade';
@@ -25,3 +26,9 @@
 @use './blocks/button';
 @use './blocks/footer';
 @use './blocks/CATCard';
+@use './blocks/SkipTo';
+@use './blocks/card--hero';
+@use './blocks/card--info';
+
+// Pages
+@use './pages/home';

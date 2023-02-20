@@ -1,3 +1,9 @@
+@use '../globals/breaks' as b;
+
 .flow > * + * {
-	margin-top: var(--flow-space, 1rem);
+	margin-top: var(--flow-space, 7.5rem);
+
+	@include b.breakpoint(lg) {
+		margin-top: var(--flow-space, 10rem);
+	}
 }

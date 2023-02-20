@@ -1,0 +1,95 @@
+@use '../globals/breaks' as b;
+
+.card-info--wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	@include b.breakpoint(lg) {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.875rem;
+	}
+}
+
+.card--info {
+	text-align: center;
+	--flow-space: 5rem;
+
+	&__image {
+		margin-inline: auto;
+		width: 200px;
+		aspect-ratio: 1;
+		position: relative;
+
+		img {
+			position: relative;
+			z-index: 2;
+		}
+
+		.circle {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background: linear-gradient(
+				90deg,
+				rgba(93, 2, 2, 0.0001) 0%,
+				rgba(93, 2, 2, 0.497569) 100%
+			);
+			opacity: 0.2;
+			position: absolute;
+
+			&[data-rotate='90deg'] {
+				transform: rotate(90deg);
+			}
+
+			&[data-rotate='45deg'] {
+				transform: rotate(45deg);
+			}
+		}
+	}
+
+	&__text {
+		--flow-space: 2rem;
+
+		h3 {
+			font-weight: 500;
+		}
+
+		p {
+			max-width: 35ch;
+		}
+	}
+
+	@include b.breakpoint(md) {
+		text-align: left;
+		display: flex;
+		align-items: center;
+
+		&__image {
+			margin-inline: unset;
+			flex-shrink: 0;
+			margin-right: 3rem;
+		}
+
+		&__text {
+			--flow-space: 0;
+
+			p {
+				max-width: unset;
+			}
+		}
+	}
+
+	@include b.breakpoint(lg) {
+		display: block;
+		text-align: center;
+		--flow-space: 0;
+
+		&__image {
+			margin-inline: auto;
+		}
+
+		&__text {
+			--flow-space: 2rem;
+		}
+	}
+}

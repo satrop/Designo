@@ -37,3 +37,13 @@
 		background-color: var(--clr-p-3);
 	}
 }
+
+.black {
+	&--fc {
+		color: var(--clr-p-2);
+	}
+
+	&--bc {
+		background-color: var(--clr-p-2);
+	}
+}

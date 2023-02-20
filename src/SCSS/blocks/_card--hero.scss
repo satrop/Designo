@@ -1,0 +1,85 @@
+@use '../globals/breaks' as b;
+
+.card--hero {
+	padding-top: 3.75rem;
+	display: grid;
+	grid-template-columns: 1fr;
+	position: relative;
+
+	svg {
+		position: absolute;
+		z-index: 0;
+		top: 5rem;
+		right: -16.625rem;
+
+		@include b.breakpoint(md) {
+			top: 6.3rem;
+			right: -7.625rem;
+		}
+
+		@include b.breakpoint(lg) {
+			top: 0;
+			right: 0;
+		}
+	}
+
+	.text {
+		width: clamp(327px, 80vw, 573px);
+		margin-inline: auto;
+		position: relative;
+		z-index: 2;
+
+		h1 {
+			margin-bottom: 1.5rem;
+		}
+
+		.button {
+			margin-top: 2.5rem;
+		}
+	}
+
+	img {
+		max-width: 150%;
+		margin-top: -6.25rem;
+		margin-bottom: -20rem;
+		margin-left: 50%;
+		transform: translateX(-50%);
+		position: relative;
+		z-index: 1;
+
+		@include b.breakpoint(lg) {
+			max-width: clamp(100%, 50vw, 400%);
+			margin-top: 0;
+			margin-bottom: -20.8rem;
+		}
+	}
+
+	@include b.breakpoint(md) {
+		padding-top: 3.75rem;
+
+		.text {
+			p {
+				padding-inline: 4rem;
+			}
+		}
+	}
+
+	@include b.breakpoint(lg) {
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		padding-inline: 5.938rem;
+
+		.center--text {
+			text-align: left;
+		}
+
+		.text {
+			margin-inline: unset;
+
+			p {
+				padding-inline: 0;
+				padding-right: 8rem;
+			}
+		}
+	}
+}

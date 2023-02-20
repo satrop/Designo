@@ -24,12 +24,14 @@ footer {
 	background-color: var(--clr-p-2);
 	box-shadow: inset 0 12rem 0 0 #fff;
 	padding-bottom: 4rem;
+	margin-top: 7.5rem;
 
 	@include b.breakpoint(md) {
 		box-shadow: inset 0 17rem 0 0 #fff;
 	}
 
 	@include b.breakpoint(lg) {
+		margin-top: 10rem;
 		box-shadow: inset 0 13rem 0 0 #fff;
 	}
 }
@@ -70,6 +72,22 @@ footer {
 		.ul {
 			justify-content: center;
 			gap: 1rem;
+
+			a {
+				display: grid;
+				place-items: center;
+
+				svg {
+					transition: fill var(--trans-dur);
+					fill: var(--clr-p-1);
+				}
+
+				&:hover {
+					svg {
+						fill: var(--clr-s-1);
+					}
+				}
+			}
 		}
 	}
 }
