@@ -1,47 +1,39 @@
 {
 	"short_name": "Designo",
 	"name": "Designo",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#9E321A",
+	"theme_color": "#9E321A",
 	"description": "Home page for Designo where good design meets you!",
 	"icons": [
 		{
-			"src": "icons-vector.svg",
+			"src": "/shared/icons-vector.svg",
 			"type": "image/svg+xml",
 			"sizes": "512x512"
 		},
 		{
-			"src": "icons-192.png",
+			"src": "/shared/icons-192.png",
 			"type": "image/png",
 			"sizes": "192x192"
 		},
 		{
-			"src": "icons-512.png",
+			"src": "/shared/icons-512.png",
 			"type": "image/png",
 			"sizes": "512x512"
 		},
 		{
-			"src": "maskable_icon.png",
+			"src": "/shared/maskable_icon.png",
 			"type": "image/png",
 			"sizes": "512x512",
-			"purpose": "any maskable"
+			"purpose": "maskable"
 		}
 	],
-	"start_url": "/",
-	"background_color": "#9E321A",
-	"theme_color": "#9E321A",
-	"display": "standalone",
-	"prefer_related_applications": false,
 	"screenshots": [
 		{
-			"src": "screenshot1.png",
+			"src": "/shared/screenshot1.png",
 			"type": "image/png",
-			"sizes": "540x720",
-			"form_factor": "narrow"
-		},
-		{
-			"src": "screenshot2.jpg",
-			"type": "image/jpg",
-			"sizes": "720x540",
-			"form_factor": "wide"
+			"sizes": "540x720"
 		}
 	]
 }
