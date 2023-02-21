@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) navigator.serviceWorker.register('/Designo/dev-sw.js?dev-sw', { scope: '/Designo/', type: 'classic' })

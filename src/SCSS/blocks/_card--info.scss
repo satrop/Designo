@@ -93,3 +93,20 @@
 		}
 	}
 }
+
+.web-design {
+	.card--info {
+		@include b.breakpoint(md) {
+			text-align: center;
+			display: block;
+
+			&__image {
+				margin-inline: auto;
+			}
+
+			&__text {
+			--flow-space: 2rem;
+			}
+		}
+	}
+}
