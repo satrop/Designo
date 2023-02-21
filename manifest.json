@@ -1,29 +1,29 @@
 {
 	"short_name": "Designo",
 	"name": "Designo",
-	"start_url": "https://satrop.github.io/Designo/",
+	"start_url": ".",
 	"display": "standalone",
 	"background_color": "#9E321A",
 	"theme_color": "#9E321A",
 	"description": "Home page for Designo where good design meets you!",
 	"icons": [
 		{
-			"src": "/shared/icons-vector.svg",
+			"src": "./shared/icons-vector.svg",
 			"type": "image/svg+xml",
 			"sizes": "512x512"
 		},
 		{
-			"src": "/shared/icons-192.png",
+			"src": "./shared/icons-192.png",
 			"type": "image/png",
 			"sizes": "192x192"
 		},
 		{
-			"src": "/shared/icons-512.png",
+			"src": "./shared/icons-512.png",
 			"type": "image/png",
 			"sizes": "512x512"
 		},
 		{
-			"src": "/shared/maskable_icon.png",
+			"src": "./shared/maskable_icon.png",
 			"type": "image/png",
 			"sizes": "512x512",
 			"purpose": "maskable"
@@ -31,7 +31,7 @@
 	],
 	"screenshots": [
 		{
-			"src": "/shared/screenshot1.png",
+			"src": "./shared/screenshot1.png",
 			"type": "image/png",
 			"sizes": "540x720"
 		}
