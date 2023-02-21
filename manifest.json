@@ -6,6 +6,7 @@
 	"background_color": "#9E321A",
 	"theme_color": "#9E321A",
 	"description": "Home page for Designo where good design meets you!",
+	"orientation": "portrait-primary",
 	"icons": [
 		{
 			"src": "./shared/icons-vector.svg",
