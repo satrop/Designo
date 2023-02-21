@@ -1,7 +1,7 @@
 {
 	"short_name": "Designo",
 	"name": "Designo",
-	"start_url": "/",
+	"start_url": "https://satrop.github.io/Designo/",
 	"display": "standalone",
 	"background_color": "#9E321A",
 	"theme_color": "#9E321A",
