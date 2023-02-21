@@ -7,6 +7,7 @@
 	"theme_color": "#9E321A",
 	"description": "Home page for Designo where good design meets you!",
 	"orientation": "portrait-primary",
+	"scope": "/app/",
 	"icons": [
 		{
 			"src": "./shared/icons-vector.svg",
@@ -28,13 +29,6 @@
 			"type": "image/png",
 			"sizes": "512x512",
 			"purpose": "maskable"
-		}
-	],
-	"screenshots": [
-		{
-			"src": "./shared/screenshot1.png",
-			"type": "image/png",
-			"sizes": "540x720"
 		}
 	]
 }
