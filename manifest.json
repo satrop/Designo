@@ -3,22 +3,22 @@
 	"name": "Designo: We design it all for you.",
 	"icons": [
 		{
-			"src": "./shared/icons-vector.svg",
+			"src": "shared/icons-vector.svg",
 			"type": "image/svg+xml",
 			"sizes": "512x512"
 		},
 		{
-			"src": "./shared/icons-192.png",
+			"src": "shared/icons-192.png",
 			"type": "image/png",
 			"sizes": "192x192"
 		},
 		{
-			"src": "./shared/icons-512.png",
+			"src": "shared/icons-512.png",
 			"type": "image/png",
 			"sizes": "512x512"
 		},
 		{
-			"src": "./shared/maskable_icon.png",
+			"src": "shared/maskable_icon.png",
 			"type": "image/png",
 			"sizes": "512x512",
 			"purpose": "any maskable"
@@ -32,13 +32,13 @@
 	"prefer_related_applications": false,
 	"screenshots": [
 		{
-			"src": "./shared/screenshot1.png",
+			"src": "shared/screenshot1.png",
 			"type": "image/png",
 			"sizes": "540x720",
 			"form_factor": "narrow"
 		},
 		{
-			"src": "./shared/screenshot2.jpg",
+			"src": "shared/screenshot2.jpg",
 			"type": "image/jpg",
 			"sizes": "720x540",
 			"form_factor": "wide"
