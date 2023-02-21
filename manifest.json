@@ -5,30 +5,31 @@
 		{
 			"src": "/shared/icons-vector.svg",
 			"type": "image/svg+xml",
-			"sizes": "512x512",
-			"purpose": "any maskable"
+			"sizes": "512x512"
 		},
 		{
 			"src": "/shared/icons-192.png",
 			"type": "image/png",
-			"sizes": "192x192",
-			"purpose": "any maskable"
+			"sizes": "192x192"
 		},
 		{
 			"src": "/shared/icons-512.png",
+			"type": "image/png",
+			"sizes": "512x512"
+		},
+		{
+			"src": "/shared/maskable_icon.png",
 			"type": "image/png",
 			"sizes": "512x512",
 			"purpose": "any maskable"
 		}
 	],
-	"id": "/?source=pwa",
 	"start_url": ".",
 	"background_color": "#E7816B",
 	"display": "standalone",
-	"scope": "/",
 	"theme_color": "#E7816B",
 	"description": "Designo: We design it all for you.",
-	"prefer_related_applications": true,
+	"prefer_related_applications": false,
 	"screenshots": [
 		{
 			"src": "/shared/screenshot1.png",
