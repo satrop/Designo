@@ -133,7 +133,7 @@ const Contact = () => {
 						<div className="[ card--info__text ] [ flow ]">
 							<h3>Canada</h3>
 							<Link
-								to="/app-design"
+								to="/locations"
 								className="[ button ] [ peach--bc radius--sm white--fc ]">
 								See location
 							</Link>
@@ -147,7 +147,7 @@ const Contact = () => {
 						<div className="[ card--info__text ] [ flow ]">
 							<h3>AUSTRALIA</h3>
 							<Link
-								to="/app-design"
+								to="/locations"
 								className="[ button ] [ peach--bc radius--sm white--fc ]">
 								See location
 							</Link>
@@ -161,7 +161,7 @@ const Contact = () => {
 						<div className="[ card--info__text ] [ flow ]">
 							<h3>UNITED KINGDOM</h3>
 							<Link
-								to="/app-design"
+								to="/locations"
 								className="[ button ] [ peach--bc radius--sm white--fc ]">
 								See location
 							</Link>

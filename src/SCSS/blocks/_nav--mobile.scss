@@ -65,7 +65,7 @@
 	width: 100%;
 	padding-inline: 5.3%;
 	background-color: var(--clr-p-3);
-	z-index: 3;
+	z-index: 999999;
 	backdrop-filter: blur(2rem);
 }
 
@@ -75,8 +75,7 @@
 	width: 100%;
 	padding-inline: 5.3%;
 	padding-block: 3rem;
-	margin-top: -1.25rem;
-	z-index: 2;
+	z-index: 99999;
 	font-size: 1.5rem;
 
 	li {
