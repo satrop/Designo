@@ -49,7 +49,9 @@
 	}
 }
 
-:not(.home) {
+.app-design,
+.web-design,
+.graphic-design {
 	.card {
 		&[data-background='pattern--welcome'] {
 			background-image: url('/shared/mobile/bg-pattern-design-pages-intro-mobile.svg');

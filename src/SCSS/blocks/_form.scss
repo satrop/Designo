@@ -1,0 +1,95 @@
+@use '../globals/breaks' as b;
+
+// Form reset
+input,
+textarea,
+button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+}
+
+form {
+	margin-top: 3rem;
+	--flow-space: 3rem;
+	display: grid;
+
+	> *:where(:not(:first-child)) {
+		margin-top: 2.5rem;
+	}
+
+	.text-danger {
+		color: #fff;
+		margin-top: 1rem;
+		padding-left: 2.125rem;
+		position: absolute;
+		bottom: -30px;
+	}
+
+	.form-group {
+		input {
+			width: 100%;
+			padding-inline: 2.125rem;
+			box-shadow: 0 1px 0 0 #fff;
+			color: #fff;
+			height: 2.75rem;
+			transition: all var(--trans-dur);
+
+			&:focus {
+				box-shadow: 0 3px 0 0 #fff;
+			}
+
+			&::placeholder {
+				transition: all var(--trans-dur);
+				color: #fff;
+				opacity: 0.8;
+			}
+
+			&[aria-invalid='true'] {
+				box-shadow: 0 3px 0 0 #fff;
+			}
+		}
+
+		input[type='textarea'] {
+			height: 5.625rem;
+		}
+	}
+
+	button {
+		min-width: 152px;
+		cursor: pointer;
+		transition: all var(--trans-dur);
+		margin-inline: auto;
+
+        @include b.breakpoint(lg) {
+            margin-inline: unset;
+            margin-left: auto;
+        }
+	}
+}
+
+.contact-form-wrapper {
+	padding: 4.5rem 1.5rem;
+
+	.contact-message {
+		text-align: center;
+		--flow-space: 1rem;
+	}
+
+	@include b.breakpoint(lg) {
+		padding: 4.5rem 5.938rem;
+		display: grid;
+		gap: 5.938rem;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+
+		.contact-message {
+			text-align: left;
+		}
+	}
+}

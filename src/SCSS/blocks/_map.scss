@@ -1,0 +1,70 @@
+@use '../globals/breaks' as b;
+
+.locations main.flow {
+	@include b.breakpoint(lg) {
+	--flow-space: 1.875rem;
+	}
+}
+
+.map {
+	min-height: 314px;
+	height: 100%;
+}
+
+.leaflet-control-attribution {
+	display: none;
+}
+
+.location {
+	h2 {
+		margin-bottom: 1.5rem;
+	}
+
+	&__info {
+		padding: 5rem 1.5rem;
+		text-align: center;
+
+		address {
+			--flow-space: 1rem;
+			font-style: normal;
+		}
+	}
+
+	@include b.breakpoint(md) {
+		display: grid;
+		gap: 1.875rem;
+
+		&__info {
+			padding: 5.313rem 4.813rem;
+			text-align: left;
+
+			address {
+				--flow-space: 0;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+	}
+
+	@include b.breakpoint(lg) {
+		grid-template-columns: 30% 1fr;
+		grid-template-areas: 'map info';
+
+		.map {
+			grid-area: map;
+		}
+
+		.location__info {
+			grid-area: info;
+		}
+
+		&.flip {
+			grid-template-columns: 1fr 30%;
+			grid-template-areas: 'info map';
+		}
+	}
+}
+
+.card[data-background='pattern--three'] {
+	background-position: left bottom;
+}
