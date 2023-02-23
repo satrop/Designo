@@ -29,6 +29,8 @@
 @use './blocks/SkipTo';
 @use './blocks/card--hero';
 @use './blocks/card--info';
+@use './blocks/WelcomeCard';
 
 // Pages
 @use './pages/home';
+@use './pages/products';

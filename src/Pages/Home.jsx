@@ -100,7 +100,7 @@ const Home = () => {
 							ariaLabel={'Hav a look at all of our Apps'}
 						/>
 						<CTACard
-							link={'graphic-design'}
+							link={'/graphic-design'}
 							cardImage={'image-graphic-design'}
 							cardTitle={'Graphic Design'}
 							ariaLabel={'View our graphic design projects'}

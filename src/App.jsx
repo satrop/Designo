@@ -2,6 +2,7 @@ import { HashRouter, Route, Routes } from 'react-router-dom';
 
 import Nav from './Components/Nav';
 import Footer from './Components/Footer';
+import ScrollToTop from './Components/ScrollToTop';
 
 import Home from './Pages/Home';
 import WebDesign from './Pages/WebDesign';
@@ -16,7 +17,7 @@ import './SCSS/styles.scss';
 function App() {
 	return (
 		<HashRouter>
-			{/* <ScrollToTop /> */}
+			<ScrollToTop />
 			<Nav />
 			<Routes>
 				<Route index element={<Home />} />

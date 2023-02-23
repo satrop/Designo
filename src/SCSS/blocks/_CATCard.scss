@@ -1,3 +1,5 @@
+@use '../globals/breaks' as b;
+
 a.card.card--cta {
 	display: grid;
 	grid-template-columns: 1fr;
@@ -50,5 +52,21 @@ a.card.card--cta {
 				margin-left: 1rem;
 			}
 		}
+	}
+}
+
+.cta-card-wrapper {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+
+	.col {
+		gap: 1.5rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	@include b.breakpoint(lg) {
+		grid-template-columns: 1fr 1fr;
 	}
 }

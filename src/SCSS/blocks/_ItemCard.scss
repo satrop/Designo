@@ -3,16 +3,17 @@
 a.card--item {
 	transition: all var(--trans-dur);
 
-	.card__title {
+	.card__title h3 {
 		transition: all var(--trans-dur);
+		margin-bottom: 1rem;
 	}
 
 	&:hover {
 		background-color: var(--clr-p-1);
 		color: #fff;
 
-		.card__title {
-			color: inherit;
+		.card__title h3 {
+			color: #fff;
 		}
 	}
 

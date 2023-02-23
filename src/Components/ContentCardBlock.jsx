@@ -5,7 +5,6 @@ const ContentCard = (props) => {
 				[ card card--content-block ${props.extraClass} ] [ ${
 				props.dark === true ? 'peach--bc' : 'peach--very-light--bc'
 			} radius--lg full-bleed ] `}
-			// data-welcome={props.welcome === true ? 'welcome' : ''}
 			data-background={
 				props.welcome === true ? 'pattern--welcome' : 'pattern--three'
 			}

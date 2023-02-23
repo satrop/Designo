@@ -1,0 +1,11 @@
+@use '../globals/breaks' as b;
+
+.welcome-card {
+	padding: 4rem 1rem;
+	--flow-space: 1rem;
+
+	p {
+		max-width: 40ch;
+		margin-inline: auto;
+	}
+}

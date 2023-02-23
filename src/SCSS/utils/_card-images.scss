@@ -21,13 +21,13 @@
 		background-position: left 120%;
 		background-repeat: no-repeat;
 
-		&[data-order="row-reverse"] {
+		&[data-order='row-reverse'] {
 			background-position: left 120%;
-			
+
 			@include b.breakpoint(md) {
 				background-position: 80% 90%;
 			}
-	
+
 			@include b.breakpoint(lg) {
 				background-position: 80% bottom;
 			}
@@ -42,9 +42,28 @@
 		}
 	}
 
-	&[data-background='pattern--welcome']{
+	&[data-background='pattern--welcome'] {
 		background-image: url('/about/desktop/bg-pattern-hero-about-desktop.svg');
 		background-position: -13% bottom;
 		background-repeat: no-repeat;
+	}
+}
+
+:not(.home) {
+	.card {
+		&[data-background='pattern--welcome'] {
+			background-image: url('/shared/mobile/bg-pattern-design-pages-intro-mobile.svg');
+			background-position: 39% 5%;
+			background-repeat: no-repeat;
+			
+			@include b.breakpoint(md) {
+				background-image: url('/shared/tablet/bg-pattern-design-pages-intro-tablet.svg');
+				background-position: 39% 50%;
+			}
+			
+			@include b.breakpoint(lg) {
+				background-position: 100% 50%;
+			}
+		}
 	}
 }
