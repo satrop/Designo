@@ -12,11 +12,15 @@ import About from './Pages/About';
 import Locations from './Pages/Locations';
 import Contact from './Pages/Contact';
 
+import leaf from '/shared/desktop/bg-pattern-leaf.svg';
+
 import './SCSS/styles.scss';
 
 function App() {
 	return (
 		<HashRouter>
+			<img src={leaf} alt="" role={'presentation'} className="leaf " />
+			<img src={leaf} alt="" role={'presentation'} className="leaf" />
 			<ScrollToTop />
 			<Nav />
 			<Routes>
