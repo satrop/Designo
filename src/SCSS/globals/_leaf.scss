@@ -4,7 +4,8 @@
     z-index: -1;
 
     &:nth-child(2) {
-        top: 60%;
+        top: unset;
+        bottom: 30px;
         right: 0;
         transform: scaleX(-1);
     }

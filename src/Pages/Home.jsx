@@ -1,6 +1,7 @@
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 import CTACard from '../Components/CTACard';
 
@@ -30,7 +31,14 @@ const Home = () => {
 			</Helmet>
 			<main id="main-content" className="wrapper flow">
 				<div className="[ card card--hero ] [ radius--lg peach--bc white--fc full-bleed ]">
-					<div className="[ text ] [ center--text ]">
+					<motion.div
+						className="[ text ] [ center--text ]"
+						initial={{ opacity: 0, x: -100 }}
+						animate={{ opacity: 1, x: 0 }}
+						transition={{
+							ease: 'easeInOut',
+							duration: 1,
+						}}>
 						<h1>
 							Award-winning custom designs and digital branding
 							solutions
@@ -46,8 +54,17 @@ const Home = () => {
 							className="[ button ] [ white--bc radius--sm black--fc ]">
 							Learn More
 						</Link>
-					</div>
-					<img src={heroImage} alt="Hero image of phone" />
+					</motion.div>
+					<motion.img
+						src={heroImage}
+						alt="Hero image of phone"
+						initial={{ opacity: 0, y: 100, x: -310 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{
+							ease: 'easeInOut',
+							duration: 1,
+						}}
+					/>
 					<svg
 						width="640"
 						height="639"
@@ -82,7 +99,15 @@ const Home = () => {
 						/>
 					</svg>
 				</div>
-				<section className="cta-card-wrapper">
+				<motion.section
+					className="cta-card-wrapper"
+					initial={{ opacity: 0, y: 100 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{
+						ease: 'easeInOut',
+						delay: 0.75,
+						duration: 1,
+					}}>
 					<div className="col">
 						<CTACard
 							link={'web-design'}
@@ -106,8 +131,16 @@ const Home = () => {
 							ariaLabel={'View our graphic design projects'}
 						/>
 					</div>
-				</section>
-				<section className="[ card-info--wrapper ] [ flow ]">
+				</motion.section>
+				<motion.section
+					className="[ card-info--wrapper ] [ flow ]"
+					initial={{ opacity: 0, y: 100 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{
+						ease: 'easeInOut',
+						delay: 1.5,
+						duration: 1,
+					}}>
 					<div className="[ card--info ] [ flow ]">
 						<div className="card--info__image">
 							<div className="circle" data-rotate="45deg"></div>
@@ -156,7 +189,7 @@ const Home = () => {
 							</p>
 						</div>
 					</div>
-				</section>
+				</motion.section>
 			</main>
 		</HelmetProvider>
 	);
